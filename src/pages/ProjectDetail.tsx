@@ -81,7 +81,12 @@ const ProjectDetail = () => {
       
       <main className="flex-1 section-padding">
         <div className="max-w-7xl mx-auto">
-          <Button variant="ghost" onClick={() => navigate('/#projects')} className="mb-8">
+          <Button variant="ghost" onClick={() => {
+            navigate('/');
+            setTimeout(() => {
+              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+          }} className="mb-8">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Projects
           </Button>
