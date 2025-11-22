@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import assembly1 from "@/assets/assembly-1.png";
+import assembly2 from "@/assets/assembly-2.png";
 
 const FocusAreasAssemblies = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const FocusAreasAssemblies = () => {
       id: 2,
       title: "Assembly Work 2",
       description: "Placeholder for assembly design and mechanism work",
-      image: null,
+      image: assembly2,
       path: "/focus-areas/assemblies/2"
     },
     {

@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import assembly1 from "@/assets/assembly-1.png";
+import assembly2 from "@/assets/assembly-2.png";
 
 const AssemblyDetail = () => {
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ const AssemblyDetail = () => {
       id: "2",
       title: "Assembly Work 2",
       description: "Detailed description of assembly work 2 and its applications in mechanical design.",
-      image: null,
+      image: assembly2,
       designDetails: {
         software: "SolidWorks",
         features: "Assembly features and mates",
