@@ -4,16 +4,18 @@ import { ArrowLeft, Upload } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import part1 from "@/assets/part-1.png";
 
 const PartDetail = () => {
   const navigate = useNavigate();
   const { partId } = useParams();
 
-  const partsData: Record<string, { title: string; description: string; details: string }> = {
+  const partsData: Record<string, { title: string; description: string; details: string; image?: string }> = {
     "1": {
       title: "Part Design 1",
       description: "Mechanical component design and modeling",
-      details: "Detailed information about Part Design 1, including specifications, materials, and manufacturing processes."
+      details: "Detailed information about Part Design 1, including specifications, materials, and manufacturing processes.",
+      image: part1
     },
     "2": {
       title: "Assembly 2",
@@ -61,11 +63,15 @@ const PartDetail = () => {
 
           <div className="max-w-4xl mx-auto space-y-8">
             <Card className="p-6 border-border bg-card">
-              <div className="aspect-video bg-secondary/50 rounded-lg flex items-center justify-center mb-6">
-                <div className="text-center space-y-2">
-                  <Upload className="h-16 w-16 mx-auto text-muted-foreground" />
-                  <p className="text-sm text-muted-foreground">Main Image Placeholder</p>
-                </div>
+              <div className="aspect-video bg-secondary/50 rounded-lg flex items-center justify-center mb-6 overflow-hidden">
+                {part.image ? (
+                  <img src={part.image} alt={part.title} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="text-center space-y-2">
+                    <Upload className="h-16 w-16 mx-auto text-muted-foreground" />
+                    <p className="text-sm text-muted-foreground">Main Image Placeholder</p>
+                  </div>
+                )}
               </div>
               
               <div className="space-y-4">

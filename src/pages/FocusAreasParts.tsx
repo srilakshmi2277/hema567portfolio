@@ -4,12 +4,13 @@ import { ArrowLeft, Upload } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import part1 from "@/assets/part-1.png";
 
 const FocusAreasParts = () => {
   const navigate = useNavigate();
 
   const parts = [
-    { id: 1, title: "Part Design 1", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/1" },
+    { id: 1, title: "Part Design 1", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/1", image: part1 },
     { id: 2, title: "Assembly 2", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/2" },
     { id: 3, title: "Part Design 3", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/3" },
     { id: 4, title: "Part Design 4", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/4" },
@@ -47,11 +48,15 @@ const FocusAreasParts = () => {
                 className="group p-6 border-border bg-card hover:shadow-lg hover:border-primary transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                 onClick={() => navigate(part.path)}
               >
-                <div className="aspect-video bg-secondary/50 rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-center space-y-2">
-                    <Upload className="h-12 w-12 mx-auto text-muted-foreground" />
-                    <p className="text-sm text-muted-foreground">Image Placeholder {part.id}</p>
-                  </div>
+                <div className="aspect-video bg-secondary/50 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                  {part.image ? (
+                    <img src={part.image} alt={part.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="text-center space-y-2">
+                      <Upload className="h-12 w-12 mx-auto text-muted-foreground" />
+                      <p className="text-sm text-muted-foreground">Image Placeholder {part.id}</p>
+                    </div>
+                  )}
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold transition-colors group-hover:text-primary">{part.title}</h3>
