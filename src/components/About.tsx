@@ -14,7 +14,7 @@ const About = () => {
     {
       icon: Target,
       title: "Explore my Work",
-      description: "SOLIDWORKS and Other Software",
+      description: "SOLIDWORKS - Parts, Assembly, Simulation",
       isClickable: true,
     },
     {
