@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import assembly1 from "@/assets/assembly-1.png";
 import assembly2 from "@/assets/assembly-2.png";
+import assembly3 from "@/assets/assembly-3.png";
 
 const FocusAreasAssemblies = () => {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ const FocusAreasAssemblies = () => {
       id: 3,
       title: "Assembly Work 3",
       description: "Placeholder for assembly design and mechanism work",
-      image: null,
+      image: assembly3,
       path: "/focus-areas/assemblies/3"
     },
     {

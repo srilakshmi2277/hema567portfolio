@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import assembly1 from "@/assets/assembly-1.png";
 import assembly2 from "@/assets/assembly-2.png";
+import assembly3 from "@/assets/assembly-3.png";
 
 const AssemblyDetail = () => {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ const AssemblyDetail = () => {
       id: "3",
       title: "Assembly Work 3",
       description: "Detailed description of assembly work 3 and its applications in mechanical design.",
-      image: null,
+      image: assembly3,
       designDetails: {
         software: "SolidWorks",
         features: "Assembly features and mates",
