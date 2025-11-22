@@ -4,6 +4,7 @@ import { ArrowLeft, Upload } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import simulation1 from "@/assets/simulation-1.png";
 
 const SimulationDetail = () => {
   const navigate = useNavigate();
@@ -13,7 +14,8 @@ const SimulationDetail = () => {
     "1": {
       title: "Simulation 1",
       description: "Finite element analysis and performance validation",
-      details: "Detailed information about Simulation 1, including analysis type, loading conditions, and results."
+      details: "Detailed information about Simulation 1, including analysis type, loading conditions, and results.",
+      image: simulation1
     },
     "2": {
       title: "Simulation 2",
