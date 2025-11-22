@@ -13,7 +13,7 @@ const About = () => {
     },
     {
       icon: Target,
-      title: "Focus Areas",
+      title: "Explore my Work",
       description: "SOLIDWORKS and Other Software",
       isClickable: true,
     },
