@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, Package, Grid3x3 } from "lucide-react";
+import { ArrowLeft, Package, Grid3x3, Activity } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -20,6 +20,12 @@ const FocusAreas = () => {
       title: "Assemblies",
       description: "Multi-component assemblies, mates and motion relationships, mechanism layouts",
       path: "/focus-areas/assemblies",
+    },
+    {
+      icon: Activity,
+      title: "Simulation",
+      description: "Finite element analysis, motion simulation, and performance validation",
+      path: "/focus-areas/simulation",
     },
   ];
 
@@ -48,7 +54,7 @@ const FocusAreas = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {areas.map((area) => (
               <Card
                 key={area.title}
