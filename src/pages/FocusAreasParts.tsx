@@ -8,7 +8,12 @@ import Footer from "@/components/Footer";
 const FocusAreasParts = () => {
   const navigate = useNavigate();
 
-  const imagePlaceholders = [1, 2, 3, 4];
+  const parts = [
+    { id: 1, title: "Part Design 1", description: "Placeholder for mechanical component design and modeling" },
+    { id: 2, title: "Assembly 2", description: "Placeholder for mechanical component design and modeling" },
+    { id: 3, title: "Part Design 3", description: "Placeholder for mechanical component design and modeling" },
+    { id: 4, title: "Part Design 4", description: "Placeholder for mechanical component design and modeling" },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -36,21 +41,21 @@ const FocusAreasParts = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {imagePlaceholders.map((num) => (
+            {parts.map((part) => (
               <Card
-                key={num}
+                key={part.id}
                 className="p-6 border-border bg-card hover:shadow-lg transition-all duration-300"
               >
                 <div className="aspect-video bg-secondary/50 rounded-lg flex items-center justify-center mb-4">
                   <div className="text-center space-y-2">
                     <Upload className="h-12 w-12 mx-auto text-muted-foreground" />
-                    <p className="text-sm text-muted-foreground">Image Placeholder {num}</p>
+                    <p className="text-sm text-muted-foreground">Image Placeholder {part.id}</p>
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold">Part Design {num}</h3>
+                  <h3 className="text-xl font-semibold">{part.title}</h3>
                   <p className="text-sm text-muted-foreground">
-                    Placeholder for mechanical component design and modeling
+                    {part.description}
                   </p>
                 </div>
               </Card>
