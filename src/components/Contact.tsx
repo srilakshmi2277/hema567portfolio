@@ -13,8 +13,8 @@ const Contact = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (XXX) XXX-XXXX",
-      link: "tel:+1XXXXXXXXXX",
+      value: "+1 (617) 708-6011",
+      link: "tel:+16177086011",
     },
     {
       icon: MapPin,
