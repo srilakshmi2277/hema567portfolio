@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import part1 from "@/assets/part-1.png";
 import part2 from "@/assets/part-2.png";
+import part3 from "@/assets/part-3.png";
 
 const PartDetail = () => {
   const navigate = useNavigate();
@@ -27,7 +28,8 @@ const PartDetail = () => {
     "3": {
       title: "Part Design 3",
       description: "Mechanical component design and modeling",
-      details: "Detailed information about Part Design 3, including specifications, materials, and manufacturing processes."
+      details: "Detailed information about Part Design 3, including specifications, materials, and manufacturing processes.",
+      image: part3
     },
     "4": {
       title: "Part Design 4",
