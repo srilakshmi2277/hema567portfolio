@@ -9,10 +9,10 @@ const FocusAreasParts = () => {
   const navigate = useNavigate();
 
   const parts = [
-    { id: 1, title: "Part Design 1", description: "Placeholder for mechanical component design and modeling" },
-    { id: 2, title: "Assembly 2", description: "Placeholder for mechanical component design and modeling" },
-    { id: 3, title: "Part Design 3", description: "Placeholder for mechanical component design and modeling" },
-    { id: 4, title: "Part Design 4", description: "Placeholder for mechanical component design and modeling" },
+    { id: 1, title: "Part Design 1", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/1" },
+    { id: 2, title: "Assembly 2", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/2" },
+    { id: 3, title: "Part Design 3", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/3" },
+    { id: 4, title: "Part Design 4", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/4" },
   ];
 
   return (
@@ -44,7 +44,8 @@ const FocusAreasParts = () => {
             {parts.map((part) => (
               <Card
                 key={part.id}
-                className="p-6 border-border bg-card hover:shadow-lg transition-all duration-300"
+                className="p-6 border-border bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                onClick={() => navigate(part.path)}
               >
                 <div className="aspect-video bg-secondary/50 rounded-lg flex items-center justify-center mb-4">
                   <div className="text-center space-y-2">

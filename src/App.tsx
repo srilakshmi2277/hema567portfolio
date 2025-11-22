@@ -9,6 +9,7 @@ import FocusAreas from "./pages/FocusAreas";
 import FocusAreasParts from "./pages/FocusAreasParts";
 import FocusAreasAssemblies from "./pages/FocusAreasAssemblies";
 import ProjectDetail from "./pages/ProjectDetail";
+import PartDetail from "./pages/PartDetail";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/focus-areas" element={<FocusAreas />} />
           <Route path="/focus-areas/parts" element={<FocusAreasParts />} />
+          <Route path="/focus-areas/parts/:partId" element={<PartDetail />} />
           <Route path="/focus-areas/assemblies" element={<FocusAreasAssemblies />} />
           <Route path="/projects/:projectId" element={<ProjectDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
