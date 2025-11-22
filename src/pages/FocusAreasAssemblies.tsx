@@ -14,25 +14,29 @@ const FocusAreasAssemblies = () => {
       id: 1,
       title: "Assembly Work 1",
       description: "Multi-component assembly design",
-      image: assembly1
+      image: assembly1,
+      path: "/focus-areas/assemblies/1"
     },
     {
       id: 2,
       title: "Assembly Work 2",
       description: "Placeholder for assembly design and mechanism work",
-      image: null
+      image: null,
+      path: "/focus-areas/assemblies/2"
     },
     {
       id: 3,
       title: "Assembly Work 3",
       description: "Placeholder for assembly design and mechanism work",
-      image: null
+      image: null,
+      path: "/focus-areas/assemblies/3"
     },
     {
       id: 4,
       title: "Assembly Work 4",
       description: "Placeholder for assembly design and mechanism work",
-      image: null
+      image: null,
+      path: "/focus-areas/assemblies/4"
     }
   ];
 
@@ -65,7 +69,8 @@ const FocusAreasAssemblies = () => {
             {assemblies.map((assembly) => (
               <Card
                 key={assembly.id}
-                className="p-6 border-border bg-card hover:shadow-lg transition-all duration-300"
+                className="p-6 border-border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                onClick={() => navigate(assembly.path)}
               >
                 <div className="aspect-video bg-secondary/50 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                   {assembly.image ? (
