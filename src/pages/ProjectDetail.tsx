@@ -28,7 +28,8 @@ const ProjectDetail = () => {
     mechanismImage: gripperMechanismImage,
     about: "This project involves the design and analysis of a worm-driven parallel jaw gripper developed as part of my robotics coursework. The goal was to create a compact, single-actuator mechanism capable of producing synchronized, symmetric jaw motion suitable for pick-and-place automation. The gripper uses a central worm gear system to convert rotational motor input into smooth and controlled linear jaw displacement, ensuring stability and precision during object handling.",
     mechanism: "The mechanism is built around a centrally mounted worm gear that drives two worm wheels placed on either side. When the worm rotates, both worm wheels turn in opposite directions due to the gear geometry. Each worm wheel is connected to a crank link, which converts the rotational motion into linear sliding motion of the jaws. This setup ensures that both jaws move equally and symmetrically, maintaining the object at the center during gripping. The worm-gear arrangement also provides high torque multiplication and self-locking, which prevents back-driving and allows the gripper to hold objects securely even when the motor is not powered.",
-    results: ["Achieved 1-DOF synchronized jaw motion using a single worm-driven actuator", "Validated the forward kinematic model: w(θ₀) = 117 − 30.25cos(0.346θ₀)", "Obtained a total jaw travel of ~60.5 mm with smooth cosine-based displacement", "Required ~331° of worm rotation for full open-to-close motion", "Self-locking mechanism allows stable gripping without continuous motor power", "SolidWorks motion study confirmed smooth, symmetric jaw movement and accurate mechanical response"]
+    results: ["Achieved 1-DOF synchronized jaw motion using a single worm-driven actuator", "Validated the forward kinematic model: w(θ₀) = 117 − 30.25cos(0.346θ₀)", "Obtained a total jaw travel of ~60.5 mm with smooth cosine-based displacement", "Required ~331° of worm rotation for full open-to-close motion", "Self-locking mechanism allows stable gripping without continuous motor power", "SolidWorks motion study confirmed smooth, symmetric jaw movement and accurate mechanical response"],
+    demoVideo: "https://1drv.ms/v/c/4b8e6fc4e21abd97/EUkBwi1dBgRKkdK6gVWvJn0BZ9_uT9xrLvEJO9K9Hu2TYQ?e=5YTJbn"
   }, {
     id: "robotic-arm",
     icon: Cpu,
@@ -134,6 +135,16 @@ const ProjectDetail = () => {
                     <span className="text-muted-foreground leading-relaxed">{result}</span>
                   </li>)}
               </ul>
+              {project.demoVideo && (
+                <div className="mt-6">
+                  <h3 className="text-lg font-semibold mb-3">Motion Video</h3>
+                  <Button asChild variant="outline">
+                    <a href={project.demoVideo} target="_blank" rel="noopener noreferrer" className="gap-2">
+                      View Motion Study Video
+                    </a>
+                  </Button>
+                </div>
+              )}
             </Card>
 
           </div>
