@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import part1 from "@/assets/part-1.png";
+import part2 from "@/assets/part-2.png";
 
 const PartDetail = () => {
   const navigate = useNavigate();
@@ -18,9 +19,10 @@ const PartDetail = () => {
       image: part1
     },
     "2": {
-      title: "Assembly 2",
+      title: "Part Design 2",
       description: "Multi-component assembly design",
-      details: "Detailed information about Assembly 2, including component relationships, mates, and motion analysis."
+      details: "Detailed information about Part Design 2, including component relationships, mates, and motion analysis.",
+      image: part2
     },
     "3": {
       title: "Part Design 3",
