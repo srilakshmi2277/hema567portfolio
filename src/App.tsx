@@ -8,9 +8,11 @@ import NotFound from "./pages/NotFound";
 import FocusAreas from "./pages/FocusAreas";
 import FocusAreasParts from "./pages/FocusAreasParts";
 import FocusAreasAssemblies from "./pages/FocusAreasAssemblies";
+import FocusAreasSimulation from "./pages/FocusAreasSimulation";
 import ProjectDetail from "./pages/ProjectDetail";
 import PartDetail from "./pages/PartDetail";
 import AssemblyDetail from "./pages/AssemblyDetail";
+import SimulationDetail from "./pages/SimulationDetail";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/focus-areas/parts/:partId" element={<PartDetail />} />
           <Route path="/focus-areas/assemblies" element={<FocusAreasAssemblies />} />
           <Route path="/focus-areas/assemblies/:assemblyId" element={<AssemblyDetail />} />
+          <Route path="/focus-areas/simulation" element={<FocusAreasSimulation />} />
+          <Route path="/focus-areas/simulation/:simulationId" element={<SimulationDetail />} />
           <Route path="/projects/:projectId" element={<ProjectDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
