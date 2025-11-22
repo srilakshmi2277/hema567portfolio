@@ -37,10 +37,7 @@ const About = () => {
 
         <div className="max-w-3xl mx-auto mb-12">
           <p className="text-lg text-muted-foreground leading-relaxed text-center">
-            I'm a Mechanical Engineer passionate about design, robotics, and manufacturing.
-            I enjoy creating mechanisms such as parallel jaw grippers, robotic arms, and CAD-based assemblies.
-            Currently pursuing my Master's at Northeastern University and actively involved in research and projects
-            focused on advancing mechanical systems and renewable energy solutions.
+            I'm a Mechanical Engineering graduate student at Northeastern University specializing in 3D design, engineering simulation, and mechanism development. My academic experience has strengthened my proficiency in SolidWorks, ANSYS Workbench, MATLAB, Fusion 360, and CAD-based mechanism design.  As a mechanical engineer, I'm passionate about advanced CAD modeling, robotics, and product design. I enjoy creating detailed mechanical assemblies, robotic linkages, and precision-based gripping mechanisms such as parallel-jaw grippers.
           </p>
         </div>
 
