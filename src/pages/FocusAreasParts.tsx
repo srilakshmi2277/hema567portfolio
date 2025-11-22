@@ -44,7 +44,7 @@ const FocusAreasParts = () => {
             {parts.map((part) => (
               <Card
                 key={part.id}
-                className="p-6 border-border bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                className="group p-6 border-border bg-card hover:shadow-lg hover:border-primary transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                 onClick={() => navigate(part.path)}
               >
                 <div className="aspect-video bg-secondary/50 rounded-lg flex items-center justify-center mb-4">
@@ -54,7 +54,7 @@ const FocusAreasParts = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold">{part.title}</h3>
+                  <h3 className="text-xl font-semibold transition-colors group-hover:text-primary">{part.title}</h3>
                   <p className="text-sm text-muted-foreground">
                     {part.description}
                   </p>
