@@ -5,6 +5,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import simulation1 from "@/assets/simulation-1.png";
+import simulation2 from "@/assets/simulation-2.png";
+import simulation3 from "@/assets/simulation-3.png";
 
 const SimulationDetail = () => {
   const navigate = useNavigate();
@@ -20,12 +22,14 @@ const SimulationDetail = () => {
     "2": {
       title: "Simulation 2",
       description: "Motion simulation and kinematic analysis",
-      details: "Detailed information about Simulation 2, including motion parameters, constraints, and results."
+      details: "Detailed information about Simulation 2, including motion parameters, constraints, and results.",
+      image: simulation2
     },
     "3": {
       title: "Simulation 3",
       description: "Stress analysis and optimization",
-      details: "Detailed information about Simulation 3, including stress distribution, safety factors, and optimization results."
+      details: "Detailed information about Simulation 3, including stress distribution, safety factors, and optimization results.",
+      image: simulation3
     },
     "4": {
       title: "Simulation 4",
