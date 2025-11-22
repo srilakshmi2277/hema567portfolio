@@ -1,13 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { ArrowLeft, ExternalLink, Video } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { useState } from "react";
+
 
 // Import project images
 import gripperImage from "@/assets/gripper-project.png";
@@ -20,8 +18,6 @@ const ProjectDetail = () => {
   const {
     projectId
   } = useParams();
-  const [videoLink, setVideoLink] = useState("");
-  const [githubLink, setGithubLink] = useState("");
   const projectsData = [{
     id: "parallel-jaw-gripper",
     icon: Grip,
@@ -140,37 +136,6 @@ const ProjectDetail = () => {
               </ul>
             </Card>
 
-            {/* Results / Work Demonstration Section */}
-            <Card className="p-8 bg-secondary/30">
-              <h2 className="text-2xl font-bold mb-6">Results / Work Demonstration</h2>
-              <div className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="video-link">OneDrive Video Link</Label>
-                    <div className="flex gap-2">
-                      <Input id="video-link" type="url" placeholder="https://onedrive.live.com/..." value={videoLink} onChange={e => setVideoLink(e.target.value)} />
-                      {videoLink && <Button size="icon" asChild>
-                          <a href={videoLink} target="_blank" rel="noopener noreferrer">
-                            <Video className="h-4 w-4" />
-                          </a>
-                        </Button>}
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="github-link">GitHub Link</Label>
-                    <div className="flex gap-2">
-                      <Input id="github-link" type="url" placeholder="https://github.com/..." value={githubLink} onChange={e => setGithubLink(e.target.value)} />
-                      {githubLink && <Button size="icon" asChild>
-                          <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4" />
-                          </a>
-                        </Button>}
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-            </Card>
           </div>
         </div>
       </main>
