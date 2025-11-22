@@ -4,12 +4,13 @@ import { ArrowLeft, Upload } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import simulation1 from "@/assets/simulation-1.png";
 
 const FocusAreasSimulation = () => {
   const navigate = useNavigate();
 
   const simulations = [
-    { id: 1, title: "Simulation 1", description: "Placeholder for finite element analysis and performance validation", path: "/focus-areas/simulation/1", image: undefined as string | undefined },
+    { id: 1, title: "Simulation 1", description: "Placeholder for finite element analysis and performance validation", path: "/focus-areas/simulation/1", image: simulation1 },
     { id: 2, title: "Simulation 2", description: "Placeholder for finite element analysis and performance validation", path: "/focus-areas/simulation/2", image: undefined as string | undefined },
     { id: 3, title: "Simulation 3", description: "Placeholder for finite element analysis and performance validation", path: "/focus-areas/simulation/3", image: undefined as string | undefined },
     { id: 4, title: "Simulation 4", description: "Placeholder for finite element analysis and performance validation", path: "/focus-areas/simulation/4", image: undefined as string | undefined },
