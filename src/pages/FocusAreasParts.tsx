@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import part1 from "@/assets/part-1.png";
 import part2 from "@/assets/part-2.png";
+import part3 from "@/assets/part-3.png";
 
 const FocusAreasParts = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const FocusAreasParts = () => {
   const parts = [
     { id: 1, title: "Part Design 1", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/1", image: part1 },
     { id: 2, title: "Part Design 2", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/2", image: part2 },
-    { id: 3, title: "Part Design 3", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/3" },
+    { id: 3, title: "Part Design 3", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/3", image: part3 },
     { id: 4, title: "Part Design 4", description: "Placeholder for mechanical component design and modeling", path: "/focus-areas/parts/4" },
   ];
 
