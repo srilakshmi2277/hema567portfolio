@@ -41,7 +41,7 @@ const ProjectDetail = () => {
     about: "This project focuses on the design and simulation of a pick-and-place robotic arm, capable of transferring objects from one position to another with precision. The mechanism replicates the function of industrial automation systems widely used in manufacturing, packaging, and assembly lines. The project emphasizes efficient motion coordination, joint synchronization, and load management to ensure accurate positioning.",
     mechanism: "The robotic arm consists of a two-link manipulator driven by a gear-based mechanism. The arm operates on rotational motion converted into linear displacement at the gripper end, allowing it to pick and place objects smoothly. The system was modeled and simulated using Adams and Fusion 360, enabling the visualization of joint constraints, angular displacement, and end-effector trajectory. The mechanism incorporates synchronized gear motion to achieve a stable grip and consistent path control.",
     results: ["Successfully simulated smooth pick-and-place motion with controlled gripping and release", "Verified joint synchronization and positional accuracy through motion analysis", "Demonstrated industrial applicability for repetitive handling and material transfer operations", "Enhanced understanding of mechanical linkages, motion constraints, and automation design"],
-    reportLink: "https://drive.google.com/your-report-link-here"
+    reportLink: "https://docs.google.com/presentation/d/1I-NitUMk_KcK2-K8a2Bo_vVf7JfSbLdZ/edit?usp=drive_link&ouid=110459904167472768885&rtpof=true&sd=true"
   }, {
     id: "copyrolysis-research",
     icon: Flame,
