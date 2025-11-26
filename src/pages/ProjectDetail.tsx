@@ -154,7 +154,7 @@ const ProjectDetail = () => {
                     <h3 className="text-lg font-semibold mb-3">Project Report</h3>
                     <Button asChild variant="default">
                       <a href={project.reportLink} target="_blank" rel="noopener noreferrer" className="gap-2">
-                        View Full Report
+                        view mechanism
                       </a>
                     </Button>
                   </div>
