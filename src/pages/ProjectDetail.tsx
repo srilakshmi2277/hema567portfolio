@@ -29,7 +29,8 @@ const ProjectDetail = () => {
     about: "This project involves the design and analysis of a worm-driven parallel jaw gripper developed as part of my robotics coursework. The goal was to create a compact, single-actuator mechanism capable of producing synchronized, symmetric jaw motion suitable for pick-and-place automation. The gripper uses a central worm gear system to convert rotational motor input into smooth and controlled linear jaw displacement, ensuring stability and precision during object handling.",
     mechanism: "The mechanism is built around a centrally mounted worm gear that drives two worm wheels placed on either side. When the worm rotates, both worm wheels turn in opposite directions due to the gear geometry. Each worm wheel is connected to a crank link, which converts the rotational motion into linear sliding motion of the jaws. This setup ensures that both jaws move equally and symmetrically, maintaining the object at the center during gripping. The worm-gear arrangement also provides high torque multiplication and self-locking, which prevents back-driving and allows the gripper to hold objects securely even when the motor is not powered.",
     results: ["Achieved 1-DOF synchronized jaw motion using a single worm-driven actuator", "Validated the forward kinematic model: w(θ₀) = 117 − 30.25cos(0.346θ₀)", "Obtained a total jaw travel of ~60.5 mm with smooth cosine-based displacement", "Required ~331° of worm rotation for full open-to-close motion", "Self-locking mechanism allows stable gripping without continuous motor power", "SolidWorks motion study confirmed smooth, symmetric jaw movement and accurate mechanical response"],
-    demoVideo: "https://youtu.be/fEWpn729Mcw"
+    demoVideo: "https://youtu.be/fEWpn729Mcw",
+    reportLink: "https://drive.google.com/your-report-link-here"
   }, {
     id: "robotic-arm",
     icon: Cpu,
@@ -39,7 +40,8 @@ const ProjectDetail = () => {
     image: roboticArmMechanismImage,
     about: "This project focuses on the design and simulation of a pick-and-place robotic arm, capable of transferring objects from one position to another with precision. The mechanism replicates the function of industrial automation systems widely used in manufacturing, packaging, and assembly lines. The project emphasizes efficient motion coordination, joint synchronization, and load management to ensure accurate positioning.",
     mechanism: "The robotic arm consists of a two-link manipulator driven by a gear-based mechanism. The arm operates on rotational motion converted into linear displacement at the gripper end, allowing it to pick and place objects smoothly. The system was modeled and simulated using Adams and Fusion 360, enabling the visualization of joint constraints, angular displacement, and end-effector trajectory. The mechanism incorporates synchronized gear motion to achieve a stable grip and consistent path control.",
-    results: ["Successfully simulated smooth pick-and-place motion with controlled gripping and release", "Verified joint synchronization and positional accuracy through motion analysis", "Demonstrated industrial applicability for repetitive handling and material transfer operations", "Enhanced understanding of mechanical linkages, motion constraints, and automation design"]
+    results: ["Successfully simulated smooth pick-and-place motion with controlled gripping and release", "Verified joint synchronization and positional accuracy through motion analysis", "Demonstrated industrial applicability for repetitive handling and material transfer operations", "Enhanced understanding of mechanical linkages, motion constraints, and automation design"],
+    reportLink: "https://drive.google.com/your-report-link-here"
   }, {
     id: "copyrolysis-research",
     icon: Flame,
@@ -52,7 +54,8 @@ const ProjectDetail = () => {
     mechanismHeading: "Detail Information",
     mechanism: ["This project investigates the co-pyrolysis of Sapindus trifoliatus (Soapnut biomass) and PVC flex banner waste to produce bio-oil, bio-char, and biogas", "A fixed-bed reactor system was used to thermally decompose the mixed feedstock under controlled temperature and heating rates", "Proximate and ultimate analyses were conducted to determine the composition and suitability of the feedstocks", "Thermogravimetric (TGA/DTG) analysis was used to study weight loss and decomposition patterns across multiple heating rates (10–25 °C/min)", "Iso-conversional kinetic models (Kissinger, Flynn-Wall-Ozawa, and Starink) were applied to estimate activation energy and understand reaction mechanisms", "The thermodynamic parameters (ΔH, ΔS, ΔG) were evaluated to analyze the spontaneity and energy potential of the reaction", "This study provided insight into how biomass–plastic synergy enhances conversion efficiency and quality of bio-fuel, offering a sustainable pathway for energy recovery"],
     mechanismImage: copyrolysisProcessImage,
-    results: ["Determined an optimal feedstock ratio of 1:1 (Soapnut : PVC) for maximum energy yield", "Established ideal pyrolysis conditions: 700 °C temperature and 10 °C/min heating rate", "Derived activation energy values for each feedstock and blend using kinetic modeling", "Calculated a calorific value of 12,947 kJ/kg for the produced bio-oil", "Demonstrated that further purification of the oil could enhance its combustion quality and energy potential"]
+    results: ["Determined an optimal feedstock ratio of 1:1 (Soapnut : PVC) for maximum energy yield", "Established ideal pyrolysis conditions: 700 °C temperature and 10 °C/min heating rate", "Derived activation energy values for each feedstock and blend using kinetic modeling", "Calculated a calorific value of 12,947 kJ/kg for the produced bio-oil", "Demonstrated that further purification of the oil could enhance its combustion quality and energy potential"],
+    reportLink: "https://drive.google.com/your-report-link-here"
   }, {
     id: "bike-handlebar",
     icon: Settings,
@@ -61,7 +64,8 @@ const ProjectDetail = () => {
     tags: ["SolidWorks", "ANSYS Workbench", "Modal Analysis", "Static Structural Analysis", "CAD Modeling", "Finite Element Analysis (FEA)", "Material Selection"],
     about: "Motorcycle handle bars and top trees experience continuous vibration, road impacts, and structural loads. Poor design can lead to discomfort, instability, and possible mechanical failure. This project aimed to analyze the vibration behavior of the handle bar using modal analysis and to evaluate the structural strength of the top tree using static analysis, ensuring safety, stiffness, and mass optimization.",
     mechanism: "The handle bar was modeled in SolidWorks and analyzed using ANSYS Modal Analysis to determine its natural frequencies and mode shapes. Vibration frequencies were compared with engine and road excitation ranges to avoid resonance conditions. The top tree was analyzed under static loading conditions representing braking forces and road shocks. FEA was used to calculate stress distribution, deformation, and factor of safety. Material optimization was conducted using steel alloys and aluminum variants to balance strength and weight.",
-    results: ["Identified the first six natural frequencies and confirmed no overlap with operational engine frequencies (avoiding resonance)", "Validated safe stress levels and minimal deformation under typical riding loads", "Confirmed a factor of safety greater than 2 for structural components under maximum expected loads", "Recommended lightweight aluminum alloy (Al 7075-T6) for the handle bar and high-strength steel for the top tree", "Enhanced understanding of vibration analysis and structural optimization for automotive applications"]
+    results: ["Identified the first six natural frequencies and confirmed no overlap with operational engine frequencies (avoiding resonance)", "Validated safe stress levels and minimal deformation under typical riding loads", "Confirmed a factor of safety greater than 2 for structural components under maximum expected loads", "Recommended lightweight aluminum alloy (Al 7075-T6) for the handle bar and high-strength steel for the top tree", "Enhanced understanding of vibration analysis and structural optimization for automotive applications"],
+    reportLink: "https://drive.google.com/your-report-link-here"
   }];
   const project = projectsData.find(p => p.id === projectId);
   if (!project) {
@@ -135,16 +139,28 @@ const ProjectDetail = () => {
                     <span className="text-muted-foreground leading-relaxed">{result}</span>
                   </li>)}
               </ul>
-              {project.demoVideo && (
-                <div className="mt-6">
-                  <h3 className="text-lg font-semibold mb-3">Motion Video</h3>
-                  <Button asChild variant="outline">
-                    <a href={project.demoVideo} target="_blank" rel="noopener noreferrer" className="gap-2">
-                      View Motion Study Video
-                    </a>
-                  </Button>
-                </div>
-              )}
+              <div className="mt-6 flex flex-wrap gap-4">
+                {project.demoVideo && (
+                  <div>
+                    <h3 className="text-lg font-semibold mb-3">Motion Video</h3>
+                    <Button asChild variant="outline">
+                      <a href={project.demoVideo} target="_blank" rel="noopener noreferrer" className="gap-2">
+                        View Motion Study Video
+                      </a>
+                    </Button>
+                  </div>
+                )}
+                {project.reportLink && (
+                  <div>
+                    <h3 className="text-lg font-semibold mb-3">Project Report</h3>
+                    <Button asChild variant="default">
+                      <a href={project.reportLink} target="_blank" rel="noopener noreferrer" className="gap-2">
+                        View Full Report
+                      </a>
+                    </Button>
+                  </div>
+                )}
+              </div>
             </Card>
 
           </div>
