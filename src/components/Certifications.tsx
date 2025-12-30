@@ -7,18 +7,21 @@ const Certifications = () => {
       issuer: "Dassault Systèmes",
       date: "December 2025",
       icon: Award,
+      pdfUrl: "/certificates/solidworks-additive-manufacturing-certificate.pdf",
     },
     {
       title: "SolidWorks 3D Modeling",
       issuer: "Udemy",
       date: "2024",
       icon: BadgeCheck,
+      pdfUrl: "/certificates/udemy-certificate.pdf",
     },
     {
       title: "Advanced CAD Design",
       issuer: "Coursera",
       date: "2024",
       icon: Medal,
+      pdfUrl: null,
     },
   ];
 
@@ -49,7 +52,18 @@ const Certifications = () => {
                     <IconComponent className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground text-lg mb-1">{cert.title}</h3>
+                    {cert.pdfUrl ? (
+                      <a
+                        href={cert.pdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-primary hover:text-primary/80 text-lg mb-1 cursor-pointer transition-colors duration-200 hover:underline"
+                      >
+                        {cert.title}
+                      </a>
+                    ) : (
+                      <h3 className="font-bold text-foreground text-lg mb-1">{cert.title}</h3>
+                    )}
                     <p className="text-muted-foreground text-sm">{cert.issuer}</p>
                     {cert.date && (
                       <p className="text-muted-foreground/70 text-xs mt-1">{cert.date}</p>
