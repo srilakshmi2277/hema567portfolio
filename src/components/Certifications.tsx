@@ -3,9 +3,9 @@ import { Award, BadgeCheck, Medal } from "lucide-react";
 const Certifications = () => {
   const certifications = [
     {
-      title: "Certified SolidWorks Associate (CSWA)",
+      title: "SOLIDWORKS Additive Manufacturing Associate",
       issuer: "Dassault Systèmes",
-      date: "2024",
+      date: "December 2025",
       icon: Award,
     },
     {
