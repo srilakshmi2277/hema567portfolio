@@ -1,4 +1,5 @@
 import { Award, BadgeCheck, Medal } from "lucide-react";
+import solidworksCertificate from "@/assets/solidworks-certificate.png";
 
 const Certifications = () => {
   const certifications = [
@@ -8,6 +9,7 @@ const Certifications = () => {
       date: "December 2025",
       icon: Award,
       pdfUrl: "/certificates/solidworks-additive-manufacturing-certificate.pdf",
+      image: solidworksCertificate,
     },
     {
       title: "SolidWorks 3D Modeling",
@@ -15,6 +17,7 @@ const Certifications = () => {
       date: "2024",
       icon: BadgeCheck,
       pdfUrl: "/certificates/udemy-certificate.pdf",
+      image: null,
     },
     {
       title: "Advanced CAD Design",
@@ -22,6 +25,7 @@ const Certifications = () => {
       date: "2024",
       icon: Medal,
       pdfUrl: null,
+      image: null,
     },
   ];
 
@@ -45,12 +49,22 @@ const Certifications = () => {
                            transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/10
                            hover:border-primary/30"
               >
-                <div className="flex flex-col items-center text-center space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 
-                                  flex items-center justify-center group-hover:from-primary/30 group-hover:to-accent/30
-                                  transition-all duration-300">
-                    <IconComponent className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
-                  </div>
+              <div className="flex flex-col items-center text-center space-y-4">
+                  {cert.image ? (
+                    <div className="w-full h-32 rounded-lg overflow-hidden mb-2">
+                      <img 
+                        src={cert.image} 
+                        alt={cert.title} 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 
+                                    flex items-center justify-center group-hover:from-primary/30 group-hover:to-accent/30
+                                    transition-all duration-300">
+                      <IconComponent className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                  )}
                   <div>
                     {cert.pdfUrl ? (
                       <a
