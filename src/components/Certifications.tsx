@@ -1,6 +1,7 @@
 import { Award, BadgeCheck, Medal } from "lucide-react";
 import solidworksCertificate from "@/assets/solidworks-certificate.png";
 import solidworksDesignCertificate from "@/assets/solidworks-design-certificate.png";
+import solidworksProfessionalCertificate from "@/assets/solidworks-professional-certificate.png";
 
 const Certifications = () => {
   const certifications = [
@@ -21,12 +22,12 @@ const Certifications = () => {
       image: solidworksDesignCertificate,
     },
     {
-      title: "Advanced CAD Design",
-      issuer: "Coursera",
-      date: "2024",
+      title: "SOLIDWORKS Design Professional (CSWP)",
+      issuer: "Dassault Systèmes",
+      date: "December 2025",
       icon: Medal,
       pdfUrl: null,
-      image: null,
+      image: solidworksProfessionalCertificate,
     },
   ];
 
