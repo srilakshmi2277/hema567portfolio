@@ -68,18 +68,14 @@ const Certifications = () => {
                     </div>
                   )}
                   <div>
-                    {cert.pdfUrl ? (
-                      <a
-                        href={cert.pdfUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-bold text-primary hover:text-primary/80 text-lg mb-1 cursor-pointer transition-colors duration-200 hover:underline"
-                      >
-                        {cert.title}
-                      </a>
-                    ) : (
-                      <h3 className="font-bold text-foreground text-lg mb-1">{cert.title}</h3>
-                    )}
+                    <a
+                      href={cert.pdfUrl || cert.image}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-primary hover:text-primary/80 text-lg mb-1 cursor-pointer transition-colors duration-200 hover:underline"
+                    >
+                      {cert.title}
+                    </a>
                     <p className="text-muted-foreground text-sm">{cert.issuer}</p>
                     {cert.date && (
                       <p className="text-muted-foreground/70 text-xs mt-1">{cert.date}</p>
