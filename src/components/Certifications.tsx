@@ -1,5 +1,6 @@
 import { Award, BadgeCheck, Medal } from "lucide-react";
 import solidworksCertificate from "@/assets/solidworks-certificate.png";
+import solidworksDesignCertificate from "@/assets/solidworks-design-certificate.png";
 
 const Certifications = () => {
   const certifications = [
@@ -12,12 +13,12 @@ const Certifications = () => {
       image: solidworksCertificate,
     },
     {
-      title: "SolidWorks 3D Modeling",
-      issuer: "Udemy",
-      date: "2024",
+      title: "SOLIDWORKS Design Associate (CSWA)",
+      issuer: "Dassault Systèmes",
+      date: "October 2025",
       icon: BadgeCheck,
-      pdfUrl: "/certificates/udemy-certificate.pdf",
-      image: null,
+      pdfUrl: null,
+      image: solidworksDesignCertificate,
     },
     {
       title: "Advanced CAD Design",
