@@ -1,10 +1,25 @@
+import { Award, BadgeCheck, Medal } from "lucide-react";
+
 const Certifications = () => {
   const certifications = [
     {
       title: "Certified SolidWorks Associate (CSWA)",
       issuer: "Dassault Systèmes",
-      date: "2024"
-    }
+      date: "2024",
+      icon: Award,
+    },
+    {
+      title: "SolidWorks 3D Modeling",
+      issuer: "Udemy",
+      date: "2024",
+      icon: BadgeCheck,
+    },
+    {
+      title: "Advanced CAD Design",
+      issuer: "Coursera",
+      date: "2024",
+      icon: Medal,
+    },
   ];
 
   return (
@@ -17,16 +32,33 @@ const Certifications = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4"></div>
         </div>
 
-        <div className="bg-secondary/30 backdrop-blur-sm rounded-xl p-8 md:p-10 space-y-4 shadow-sm border border-border/50">
-          {certifications.map((cert, index) => (
-            <div key={index}>
-              <p className="text-foreground/90 leading-relaxed text-base">
-                <span className="font-semibold text-foreground">{cert.title}</span>
-                {cert.issuer && <span> — {cert.issuer}</span>}
-                {cert.date && <span className="text-muted-foreground"> ({cert.date})</span>}
-              </p>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {certifications.map((cert, index) => {
+            const IconComponent = cert.icon;
+            return (
+              <div
+                key={index}
+                className="group bg-card/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-border/50 
+                           transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/10
+                           hover:border-primary/30"
+              >
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 
+                                  flex items-center justify-center group-hover:from-primary/30 group-hover:to-accent/30
+                                  transition-all duration-300">
+                    <IconComponent className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground text-lg mb-1">{cert.title}</h3>
+                    <p className="text-muted-foreground text-sm">{cert.issuer}</p>
+                    {cert.date && (
+                      <p className="text-muted-foreground/70 text-xs mt-1">{cert.date}</p>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
