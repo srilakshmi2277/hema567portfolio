@@ -2,6 +2,7 @@ import { Award, BadgeCheck, Medal } from "lucide-react";
 import solidworksCertificate from "@/assets/solidworks-certificate.png";
 import solidworksDesignCertificate from "@/assets/solidworks-design-certificate.png";
 import solidworksProfessionalCertificate from "@/assets/solidworks-professional-certificate.png";
+import solidworksAdditiveCertificateFull from "@/assets/solidworks-additive-certificate-full.png";
 
 const Certifications = () => {
   const certifications = [
@@ -10,7 +11,7 @@ const Certifications = () => {
       issuer: "Dassault Systèmes",
       date: "December 2025",
       icon: Award,
-      pdfUrl: "/certificates/solidworks-additive-manufacturing-certificate.pdf",
+      clickUrl: solidworksAdditiveCertificateFull,
       image: solidworksCertificate,
     },
     {
@@ -18,7 +19,7 @@ const Certifications = () => {
       issuer: "Dassault Systèmes",
       date: "October 2025",
       icon: BadgeCheck,
-      pdfUrl: null,
+      clickUrl: solidworksDesignCertificate,
       image: solidworksDesignCertificate,
     },
     {
@@ -26,7 +27,7 @@ const Certifications = () => {
       issuer: "Dassault Systèmes",
       date: "December 2025",
       icon: Medal,
-      pdfUrl: null,
+      clickUrl: solidworksProfessionalCertificate,
       image: solidworksProfessionalCertificate,
     },
   ];
@@ -69,7 +70,7 @@ const Certifications = () => {
                   )}
                   <div>
                     <a
-                      href={cert.pdfUrl || cert.image}
+                      href={cert.clickUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-bold text-primary hover:text-primary/80 text-lg mb-1 cursor-pointer transition-colors duration-200 hover:underline"
