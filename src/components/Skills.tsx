@@ -6,7 +6,7 @@ const Skills = () => {
     category: "Simulation and Analysis",
     skills: "ANSYS Workbench (Static, Modal, Fatigue), SolidWorks Motion Simulation, Thermal analysis fundamentals"
   }, {
-    category: "Testing and Prototyping",
+    category: "Manufacturing and Prototyping",
     skills: "3D Printing, CNC Machining, Welding, Casting, Sheet Metal, Assembly Operations, Rapid prototyping"
   }, {
     category: "Energy and Thermal Systems",
