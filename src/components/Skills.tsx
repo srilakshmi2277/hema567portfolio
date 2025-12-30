@@ -1,22 +1,22 @@
 const Skills = () => {
   const skillSections = [{
-    category: "Design and Simulation",
-    skills: "SolidWorks-CSWA Certification (3D Modeling & Viewing, Curves, Surfaces, Sheet Metal & Weldments, Sustainable Design, Tolerancing, Injection Molding), Autodesk Inventor, AutoCAD, ANSYSworkbench, Fusion 360"
+    category: "3D CAD and Product Design",
+    skills: "SolidWorks (CSWA), Fusion 360, Autodesk Inventor, AutoCAD, Fusion 360, GD&T, Design for Manufacturing (DFM), Tool & Fixture Design, Mechanism Design"
   }, {
-    category: "Manufacturing",
-    skills: "3D Printing, CNC Machining, Welding, Casting, Prototyping, GD&T"
+    category: "Simulation and Analysis",
+    skills: "ANSYS Workbench (Static, Modal, Fatigue), SolidWorks Motion Simulation, Thermal analysis fundamentals"
   }, {
-    category: "Analysis",
-    skills: "Thermal, Static, Modal, Fatigue, CFD Basics"
+    category: "Testing and Prototyping",
+    skills: "3D Printing, CNC Machining, Welding, Casting, Sheet Metal, Assembly Operations, Rapid prototyping"
   }, {
-    category: "Soft Skills",
-    skills: "Design Thinking, Problem Solving, Team Collaboration, Technical Reporting"
+    category: "Energy and Thermal Systems",
+    skills: "Heat transfer, Thermal behavior of materials, Energy storage fundamentals"
   }, {
     category: "Programming",
     skills: "Python, MATLAB"
   }, {
-    category: "Other Tools",
-    skills: "MS Office"
+    category: "Soft Skills",
+    skills: "Time Management, Team Collaboration, Problem Solving, Technical Communication"
   }];
   return <section id="skills" className="section-padding bg-secondary/30">
       <div className="max-w-7xl mx-auto">
